@@ -1,18 +1,21 @@
+// Employee class which contains basic info of a employee excludes their specific role details
+
+const shortid = require('shortid');
 class Employee {
-    constructor(name, id, email) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
+    constructor(Name, Email) {
+        this.Name = Name;
+        this.Id =  shortid.generate();
+        this.Email = Email;
     }
 
     getName() {
-        return this.name;
+        return this.Name;
     }
     getId() {
-        return this.id;
+        return this.Id;
     }
     getEmail() {
-        return this.email;
+        return this.Email;
     }
     getRole() {
         return "Employee";

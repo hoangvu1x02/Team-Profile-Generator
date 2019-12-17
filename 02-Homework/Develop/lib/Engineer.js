@@ -6,7 +6,6 @@ class Engineer extends Employee{
         super(Name, Id, Title);
         this.GitHUB = GitHUB;
     }
-    
     getGitHUB(){
         return this.GitHUB;
     }
