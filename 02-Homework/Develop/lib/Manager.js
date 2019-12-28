@@ -1,9 +1,10 @@
 //Info required for a Manager
 const Employee = require('./Employee');
 
+
 class Manager extends Employee {
-    constructor(Name, Id, Title, OfficeNumber) {
-        super(Name, Id, Title);
+    constructor(Name, Email, OfficeNumber) {
+        super(Name, Email);
         this.OfficeNumber = OfficeNumber;
     }
     getOfficeNumber() {

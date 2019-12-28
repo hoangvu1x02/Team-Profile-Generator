@@ -113,12 +113,16 @@ async function TeamFormation() {
                     TeamArray.push(engineer);
                     break;
                 case 'Intern':
-                    const Intern = new Engineer(name, email, school);
-                    TeamArray.push(Intern);
+                    const intern = new Intern (name, email, school);
+                    TeamArray.push(intern);
                     break;
             }
         }
         console.log(TeamArray);
+
+        const HTML = await ejs.renderFile("./templates/Main.ejs", {TeamArray: TeamArray});
+        await writeFileAsync("./output/team.html", HTML, 'utf-8');
+
     }
     catch (err) {
         console.log(err)
